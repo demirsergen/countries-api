@@ -16,20 +16,20 @@
 }
 
 body {
-    padding: 1em;
     background: var(--darkmode-bg);
     color: white;
     font-family: 'Nunito Sans', sans-serif;
 }
 
 img {
-    width: 100%;
+    max-width: 100%;
     background: transparent;
     height: 10em;
 }
 
 .grid {
-    max-width: 1100px;
+    max-width: 100%;
+    padding: 1em 2em;
     margin: 0 auto;
     display: grid;
     grid-gap: 1em;
@@ -38,7 +38,7 @@ img {
 
 .gridElement {
     padding: 0 1em 1em;
-    background: var( --darkmode-elements);
+    background: var(--darkmode-bg);
     display:flex;
     flex-direction: column;
     align-items: center;
@@ -79,10 +79,72 @@ img {
 
 
 .headerContainer {
-    width: 1100px;
-    padding: 1em 0;
+    width: 100%;
+    padding: 1em 3em; 
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    background: var(--darkmode-elements);
+}
+
+.filterContainer {
+    width: 100%;
+    padding: 1em 3em;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Nunito Sans', sans-serif;
+
+}
+
+.filterContainer input {
+    padding: 1em;
+    border-radius: .5em;
+    border: none;
+    width: 25em;
+    background: var(--darkmode-elements);
+    color: white;
+    outline: none;
+}
+
+.filterContainer input::placeholder {
+    color: rgb(185, 185, 185);
+}
+
+.filterContainer select {
+    padding: 1em;
+    width: 15em;
+    border-radius: .5em;
+    border: none;
+    cursor: pointer;
+    background: var(--darkmode-elements);
+    color: rgb(185, 185, 185);
+    outline: none;
+}
+
+.filterContainer select option {
+    background: var(--darkmode-elements);
+}
+
+.country {
+    width: 80%;
+    padding: 1em 3em;
+}
+
+.country article {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.country .flag img {
+    width: 500px;
+    height: auto;
+    margin-right: 5em;
+}
+
+.country h2 {
+    margin-bottom: 1em;
 }

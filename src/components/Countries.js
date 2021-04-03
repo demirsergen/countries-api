@@ -1,4 +1,5 @@
 import React, {useEffect, useState } from 'react'
+import { Link } from 'react-router-dom';
 import  '../index.css';
 
 const Countries = () => {
@@ -32,15 +33,15 @@ const Countries = () => {
                         <h4>Population: <span>{population}</span></h4>
                         <h4>Region: <span>{region}</span></h4>
                         <h4>Capital: <span>{capital}</span></h4>
+                        <Link to={`/countries/${name}`} className="btn">Learn More</Link>
                     </div>
                 </article>
             </div>
             )
-            })};
+            })}
             </section>
         </>
-        )
-        
+        ) 
 }
 
 export default Countries
