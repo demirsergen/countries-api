@@ -12,7 +12,6 @@ const Countries = () => {
             const response = await fetch(url);
             const countries = await response.json()
             setCountries(countries);
-            console.log(countries);
         };
 
     useEffect(() => {
@@ -33,7 +32,7 @@ const Countries = () => {
                         <h4>Population: <span>{population}</span></h4>
                         <h4>Region: <span>{region}</span></h4>
                         <h4>Capital: <span>{capital}</span></h4>
-                        <Link to={`/countries/${name}`} className="btn">Learn More</Link>
+                        <Link to={`/countries/${name}`} className="btn-primary">Learn More</Link>
                     </div>
                 </article>
             </div>
